@@ -1,4 +1,5 @@
 # hipread 0.2.3
+* hipread now uses roxygen2 version 7.2.1.
 
 # hipread 0.2.2
 * hipread now uses roxygen2 version 7.1.0, which generates some additional 
