@@ -2,6 +2,7 @@
 
 * Rebuild roxygen2 documentation to conform with new HTML5 guidelines
 * Remove LazyData field from DESCRIPTION file
+* Fix bad URL in README.md
 
 ## Test environments
 * local Windows, R 4.2.1

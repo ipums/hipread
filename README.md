@@ -1,7 +1,7 @@
 # hipread
 
 [![Project
-Status:Active](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+Status:Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![CRAN status](https://www.r-pkg.org/badges/version/hipread)](https://cran.r-project.org/package=hipread)
 [![R-CMD-check](https://github.com/ipums/hipread/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ipums/hipread/actions/workflows/R-CMD-check.yaml)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/iaxoy4hjb1m85p2b/branch/master?svg=true)](https://ci.appveyor.com/project/mpcit/hipread)
