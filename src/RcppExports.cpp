@@ -6,6 +6,11 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // read_chunked_long
 void read_chunked_long(CharacterVector filename, Environment callback, int chunksize, CharacterVector var_names, CharacterVector var_types, List rt_info_, List var_pos_info_, List var_opts_, int skip, bool isGzipped, CharacterVector encoding, bool progress);
 RcppExport SEXP _hipread_read_chunked_long(SEXP filenameSEXP, SEXP callbackSEXP, SEXP chunksizeSEXP, SEXP var_namesSEXP, SEXP var_typesSEXP, SEXP rt_info_SEXP, SEXP var_pos_info_SEXP, SEXP var_opts_SEXP, SEXP skipSEXP, SEXP isGzippedSEXP, SEXP encodingSEXP, SEXP progressSEXP) {
