@@ -33,7 +33,5 @@ Suggests:
     dplyr,
     readr,
     testthat
-SystemRequirements:
-    C++11
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 Roxygen: list(markdown = TRUE)
