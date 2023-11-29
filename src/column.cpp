@@ -171,7 +171,7 @@ RObject columnsToDf(std::vector<ColumnPtr> columns, Rcpp::CharacterVector names,
     if (columns[i]->has_failures()) {
       std::string message = columns[i]->describe_failures(
               Rcpp::as<std::string>(names[static_cast<long>(i)]));
-      Rf_warning(message.c_str());
+      Rf_warning("%s", message.c_str());
     }
     out[static_cast<long>(i)] = columns[i]->vector();
   }
