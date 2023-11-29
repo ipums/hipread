@@ -1,11 +1,14 @@
 ## Reasons for release
 
-* Rebuild roxygen2 documentation to conform with new HTML5 guidelines
-* Remove LazyData field from DESCRIPTION file
-* Fix bad URL in README.md
+Fixes to resolve one warning and one note from https://cran.r-project.org/web/checks/check_results_hipread.html
+
+* Warning: Pass a string literal for the format argument of Rf_warning(), to 
+  avoid -Wformat-security warning.
+* Remove `SystemRequirements: C++11` from Description file to avoid note about 
+  old C++ version.
 
 ## Test environments
-* local Windows, R 4.2.1
+* local Windows, R 4.3.2
 * win builder release and devel
 * MacOS (release), Windows (release), and Ubuntu (devel, release, old release) 
   via GitHub Actions
