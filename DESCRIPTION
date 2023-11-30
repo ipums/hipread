@@ -1,7 +1,7 @@
 Package: hipread
 Type: Package
 Title: Read Hierarchical Fixed Width Files
-Version: 0.2.3.9000
+Version: 0.2.4
 Authors@R: c(
     person("Greg", "Freedman Ellis", role = "aut"),
     person("Derek Burk", email = "ipums+cran@umn.edu", role = c("aut", "cre")),
@@ -33,7 +33,5 @@ Suggests:
     dplyr,
     readr,
     testthat
-SystemRequirements:
-    C++11
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 Roxygen: list(markdown = TRUE)
