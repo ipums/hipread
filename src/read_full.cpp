@@ -172,7 +172,7 @@ RObject read_list(
 
     if (cur_pos_rt[rt_index] >= out[rt_index][0]->size()) {
       // Resize by guessing from the progress bar
-      resizeAllColumns(out[rt_index], static_cast<int>((cur_pos_rt[rt_found] / data->progress_info().first) * 1.1));
+      resizeAllColumns(out[rt_index], static_cast<int>((cur_pos_rt[rt_index] / data->progress_info().first) * 1.1));
     }
 
     // Check if raw line is long enough

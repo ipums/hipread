@@ -55,3 +55,23 @@ test_that("basic example matches long format", {
   )
 })
 
+test_that("Can read rectangular into a list", {
+  actual <- hipread_list(
+    hipread_example("test-basic.dat"),
+    hip_fwf_widths(
+      c(1, 2, 1),
+      c("var1", "var2", "var3"),
+      c("character", "character", "character")
+    ),
+    hip_rt(1, 0)
+  )
+
+  expect_true(is.list(actual))
+  expect_equal(length(actual), 1)
+  expect_equal(nrow(actual[[1]]), 0)
+  expect_equal(ncol(actual[[1]]), 3)
+  expect_equal(
+    actual[[1]]$var1,
+    c("H", "P", "P", "P", "H", "P", "P", "H", "P")
+  )
+})
