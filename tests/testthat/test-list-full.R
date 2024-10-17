@@ -68,7 +68,7 @@ test_that("Can read rectangular into a list", {
 
   expect_true(is.list(actual))
   expect_equal(length(actual), 1)
-  expect_equal(nrow(actual[[1]]), 0)
+  expect_equal(nrow(actual[[1]]), 9)
   expect_equal(ncol(actual[[1]]), 3)
   expect_equal(
     actual[[1]]$var1,
