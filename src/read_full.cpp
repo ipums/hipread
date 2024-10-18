@@ -172,7 +172,10 @@ RObject read_list(
 
     if (cur_pos_rt[rt_index] >= out[rt_index][0]->size()) {
       // Resize by guessing from the progress bar
-      resizeAllColumns(out[rt_index], static_cast<int>((cur_pos_rt[rt_index] / data->progress_info().first) * 1.1));
+      double resize_scale = 1.1 / data->progress_info().first;
+      // But make sure you at least 1.5x size because it's better to overallocate
+      resize_scale = std::max(1.5, resize_scale);
+      resizeAllColumns(out[rt_index], static_cast<int>(cur_pos_rt[rt_index] * resize_scale));
     }
 
     // Check if raw line is long enough
