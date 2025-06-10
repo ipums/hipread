@@ -1,3 +1,6 @@
+# hipread 0.2.5
+* Fixes problem with `hipread_list()` that caused a segfault in some situations.
+
 # hipread 0.2.4
 * Fixes for one warning and one note from CRAN checks
 
