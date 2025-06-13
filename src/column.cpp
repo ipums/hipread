@@ -5,6 +5,7 @@
 #include "string_utils.h"
 #include "iconv.h"
 
+
 #include <Rcpp.h>
 using namespace Rcpp;
 
@@ -101,46 +102,27 @@ void ColumnInteger::setValue(int i, const char* x_start, const char* x_end) {
 }
 
 void ColumnCharacter::resize(int n) {
-  if (n == n_)
-    return;
-
-  if (n > 0 && n < n_) {
-    SETLENGTH(values_, n);
-    SET_TRUELENGTH(values_, n);
-  } else {
-    values_ = Rf_lengthgets(values_, n);
-  }
+  if (n == n_) return;
+  values_ = Rf_lengthgets(values_, n);
   n_ = n;
-
 }
 
-void ColumnDouble::resize(int n) {
-  if (n == n_)
-    return;
 
-  if (n > 0 && n < n_) {
-    SETLENGTH(values_, n);
-    SET_TRUELENGTH(values_, n);
-  } else {
-    values_ = Rf_lengthgets(values_, n);
-  }
+void ColumnDouble::resize(int n) {
+  if (n == n_) return;
+  values_ = Rf_lengthgets(values_, n);
   n_ = n;
   valuepointer = REAL(values_);
 }
 
-void ColumnInteger::resize(int n) {
-  if (n == n_)
-    return;
 
-  if (n > 0 && n < n_) {
-    SETLENGTH(values_, n);
-    SET_TRUELENGTH(values_, n);
-  } else {
-    values_ = Rf_lengthgets(values_, n);
-  }
+void ColumnInteger::resize(int n) {
+  if (n == n_) return;
+  values_ = Rf_lengthgets(values_, n);
   n_ = n;
   valuepointer = INTEGER(values_);
 }
+
 
 std::vector<ColumnPtr> createAllColumns(CharacterVector types, Rcpp::List var_opts, Iconv* pEncoder_) {
   int num_cols = static_cast<int>(types.size());
