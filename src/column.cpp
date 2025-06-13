@@ -4,7 +4,7 @@
 #include "column.h"
 #include "string_utils.h"
 #include "iconv.h"
-#include "column_utils.h"
+
 
 #include <Rcpp.h>
 using namespace Rcpp;
@@ -103,14 +103,14 @@ void ColumnInteger::setValue(int i, const char* x_start, const char* x_end) {
 
 void ColumnCharacter::resize(int n) {
   if (n == n_) return;
-  values_ = resize_character_vector(values_, n_, n);
+  values_ = Rf_lengthgets(values_, n);
   n_ = n;
 }
 
 
 void ColumnDouble::resize(int n) {
   if (n == n_) return;
-  values_ = resize_numeric_vector(values_, n_, n);
+  values_ = Rf_lengthgets(values_, n);
   n_ = n;
   valuepointer = REAL(values_);
 }
@@ -118,7 +118,7 @@ void ColumnDouble::resize(int n) {
 
 void ColumnInteger::resize(int n) {
   if (n == n_) return;
-  values_ = resize_integer_vector(values_, n_, n);
+  values_ = Rf_lengthgets(values_, n);
   n_ = n;
   valuepointer = INTEGER(values_);
 }
