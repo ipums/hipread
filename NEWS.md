@@ -2,6 +2,8 @@
 * Fixes problem with `hipread_list()` that caused a segfault in some situations.
 * Require Rcpp >= 1.0.12 to avoid installation errors related to format string 
   security (see ipums/ipumsr#93).
+* Refactors column resizing code to avoid use of non-API functions SETLENGTH and 
+  SET_TRUELENGTH (see issue #7).
 
 # hipread 0.2.4
 * Fixes for one warning and one note from CRAN checks

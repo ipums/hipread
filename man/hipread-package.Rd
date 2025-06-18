@@ -8,6 +8,14 @@
 \description{
 Read hierarchical fixed width files like those commonly used by many census data providers. Also allows for reading of data in chunks, and reading 'gzipped' files without storing the full file in memory.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/ipums/hipread}
+  \item Report bugs at \url{https://github.com/ipums/hipread/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Derek Burk \email{ipums+cran@umn.edu}
 

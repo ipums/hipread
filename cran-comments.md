@@ -1,15 +1,16 @@
-## Reasons for release
+## Reason for release
 
-Fixes to resolve one warning and one note from https://cran.r-project.org/web/checks/check_results_hipread.html
+Fix to resolve a note from CRAN checks: 
+https://cran.r-project.org/web/checks/check_results_hipread.html
 
-* Warning: Pass a string literal for the format argument of Rf_warning(), to 
-  avoid -Wformat-security warning.
-* Remove `SystemRequirements: C++11` from Description file to avoid note about 
-  old C++ version.
+* Found non-API calls to R: ‘SETLENGTH’, ‘SET_TRUELENGTH’
+  
+  Compiled code should not call non-API entry points in R.
 
 ## Test environments
-* local Windows, R 4.3.2
-* win builder release and devel
+
+* local Windows, R 4.5.0
+* win builder devel
 * MacOS (release), Windows (release), and Ubuntu (devel, release, old release) 
   via GitHub Actions
 
@@ -18,4 +19,4 @@ Fixes to resolve one warning and one note from https://cran.r-project.org/web/ch
 0 errors | 0 warnings | 0 notes
 
 ## Downstream dependencies
-There is 1 downstream dependency and it is not affected by the update.
+There is one downstream dependency (ipumsr) and it is not affected by the update.
