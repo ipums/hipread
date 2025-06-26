@@ -1,3 +1,5 @@
+# hipread (development version)
+
 # hipread 0.2.5
 * Fixes problem with `hipread_list()` that caused a segfault in some situations.
 * Require Rcpp >= 1.0.12 to avoid installation errors related to format string 
