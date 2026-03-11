@@ -76,7 +76,7 @@ int my_strnlen(const char* s, int maxlen) {
 SEXP safeMakeChar(const char* start, size_t n, bool hasNull) {
   size_t m = hasNull ? readr_strnlen(start, n) : n;
   if (m > INT_MAX) {
-    Rf_error("R character strings are limited to 2^31-1 bytes");
+    Rcpp::stop("R character strings are limited to 2^31-1 bytes");
   }
   return Rf_mkCharLenCE(start, static_cast<int>(m), CE_UTF8);
 }
