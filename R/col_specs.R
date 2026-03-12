@@ -84,7 +84,7 @@ hip_fwf_widths <- function(
 #'
 #' Create a record type information object for hipread to use
 #' when reading hierarchical files. A width of 0 indicates that
-#' the file is rectangular (eg a standard fixed width file).
+#' the file is rectangular (e.g. a standard fixed width file).
 #'
 #' @param start Start position of the record type variable
 #' @param width The width of the record type variable

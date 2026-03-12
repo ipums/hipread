@@ -20,5 +20,5 @@ A list, really only intended to be used internally by hipread
 \description{
 Create a record type information object for hipread to use
 when reading hierarchical files. A width of 0 indicates that
-the file is rectangular (eg a standard fixed width file).
+the file is rectangular (e.g. a standard fixed width file).
 }
