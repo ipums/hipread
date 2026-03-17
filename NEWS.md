@@ -1,3 +1,5 @@
+# hipread (development version)
+
 # hipread 0.2.6
 
 * Replaced call to `Rf_error()` with `Rcpp::stop()` (see issue #10).
